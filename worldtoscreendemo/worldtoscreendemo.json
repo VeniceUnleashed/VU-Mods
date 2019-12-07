@@ -1,0 +1,9 @@
+{
+	"Name": "worldtoscreendemo",
+	"Authors": ["Powback"],
+	"Description": "none",
+	"URL": "none",
+	"Version": 0,
+	"HasWebUI": true,
+	"HasVeniceEXT": true
+};

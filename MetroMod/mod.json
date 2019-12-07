@@ -1,0 +1,9 @@
+{
+	"Name": "MetroMod",
+	"Authors": ["Pow"],
+	"Description": "Spawn vehicles in metro",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

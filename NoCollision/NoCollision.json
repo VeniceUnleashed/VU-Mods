@@ -1,0 +1,9 @@
+{
+	"Name": "NoCollision",
+	"Authors": [ "Powback" ],
+	"Description": "NoCollision",
+	"URL": "",
+	"Version": 1,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

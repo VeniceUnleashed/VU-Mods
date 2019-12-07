@@ -1,0 +1,9 @@
+{
+	"Name": "inputrestriction",
+	"Authors": ["Powback"],
+	"Description": "Disables player movement",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

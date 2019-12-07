@@ -1,0 +1,9 @@
+{
+	"Name": "Wake Night",
+	"Authors": [ "NoFaTe" ],
+	"Description": "Night time Wake Island",
+	"URL": "",
+	"Version": 1,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

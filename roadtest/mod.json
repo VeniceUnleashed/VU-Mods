@@ -1,0 +1,9 @@
+{
+	"Name": "roadtest",
+	"Authors": ["Powback"],
+	"Description": "spawn roads",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

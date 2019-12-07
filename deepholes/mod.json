@@ -1,0 +1,9 @@
+{
+	"Name": "deepholes",
+	"Authors": ["Powback"],
+	"Description": "Increases crater size",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

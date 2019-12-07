@@ -1,0 +1,9 @@
+{
+	"Name": "carrier",
+	"Authors": ["Powback"],
+	"Description": "Create a carrier please",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

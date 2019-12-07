@@ -1,0 +1,9 @@
+{
+	"Name": "DeathCam",
+	"Authors": ["First person death camera"],
+	"Description": "none",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

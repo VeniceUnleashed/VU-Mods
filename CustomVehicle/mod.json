@@ -1,0 +1,9 @@
+{
+	"Name": "CustomVehicle",
+	"Authors": ["Powback"],
+	"Description": "Custom vehicle",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

@@ -1,0 +1,9 @@
+{
+	"Name": "DynamicLights",
+	"Authors": ["Powback"],
+	"Description": "Dynamic lights yo",
+	"URL": "none",
+	"Version": 0,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

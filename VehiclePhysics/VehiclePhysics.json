@@ -1,0 +1,9 @@
+{
+	"Name": "VehiclePhysics",
+	"Authors": ["Powback"],
+	"Description": "Messing with vehicle physics",
+	"URL": "none",
+	"Version": 0,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

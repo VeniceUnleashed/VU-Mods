@@ -1,0 +1,9 @@
+{
+	"Name": "NoRecoilspring",
+	"Authors": ["Powback"],
+	"Description": "No recoil spring",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

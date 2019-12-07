@@ -1,0 +1,9 @@
+{
+	"Name": "WeaponPickup",
+	"Authors": ["Powback"],
+	"Description": "Pick up weapons",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

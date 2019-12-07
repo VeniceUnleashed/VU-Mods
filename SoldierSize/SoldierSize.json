@@ -1,0 +1,9 @@
+{
+	"Name": "SoldierSize",
+	"Authors": [ "Powback" ],
+	"Description": "Allows you to change the scale of soldiers",
+	"URL": "",
+	"Version": 1,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

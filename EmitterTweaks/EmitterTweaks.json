@@ -1,0 +1,9 @@
+{
+	"Name": "EmitterTweaks",
+	"Authors": ["Powback"],
+	"Description": "Some emitter tweaks to make them look cooler",
+	"URL": "none",
+	"Version": 0,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

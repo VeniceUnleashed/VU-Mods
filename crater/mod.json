@@ -1,0 +1,9 @@
+{
+	"Name": "crater",
+	"Authors": ["Powback"],
+	"Description": "big craters muh realism",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

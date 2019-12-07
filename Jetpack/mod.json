@@ -1,0 +1,9 @@
+{
+	"Name": "Jetpack",
+	"Authors": ["Powback"],
+	"Description": "Gives you a jetpack",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

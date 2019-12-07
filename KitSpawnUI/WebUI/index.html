@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SpawnKit</title>
+	<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div id="Container">
+		<div id="KitSelection">
+		  <input class="kitSelection" type="radio" name="kitSelection" value="0" id="kit0" checked="checked"><label for="kit0">Kit0</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="1" id="kit1"><label for="kit1">Kit1</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="2" id="kit2"><label for="kit2">Kit2</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="3" id="kit3"><label for="kit3">Kit3</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="4" id="kit4"><label for="kit4">Kit4</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="5" id="kit5"><label for="kit5">Kit5</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="6" id="kit6"><label for="kit6">Kit6</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="7" id="kit7"><label for="kit7">Kit7</label><br>
+		  <input class="kitSelection" type="radio" name="kitSelection" value="8" id="kit8"><label for="kit8">Kit8</label><br>
+		  <button id="SpawnButton" onclick="SpawnSoldier()">Spawn</button>
+		</div>
+	</div>
+	<script type="text/javascript">	
+		selectedKit = 0;
+		CanSpawnWithKit = [
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true
+		];
+		function EnableSpawnForKit(kitId) {
+			CanSpawnWithKit[kitId] = true;
+			$('#SpawnButton').prop('disabled', !CanSpawnWithKit[selectedKit]);
+		}
+		function DisableSpawnForKit(kitId) {
+			CanSpawnWithKit[kitId] = false;
+			$('#SpawnButton').prop('disabled', !CanSpawnWithKit[selectedKit]);
+		}
+
+		$('.kitSelection').change(function() {
+			selectedKit = $('input[name=kitSelection]:checked', '#KitSelection').val()
+			$('#SpawnButton').prop('disabled', !CanSpawnWithKit[selectedKit]);
+		});
+
+		function SpawnSoldier() {
+			console.log("Spawning with " + selectedKit)
+	        WebUI.Call('DispatchEventLocal', 'RealityModUI:SpawnWithKit', selectedKit);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+	"Name": "baguetteknife",
+	"Authors": ["Powback"],
+	"Description": "Replace the knife with a baguette",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

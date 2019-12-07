@@ -1,0 +1,9 @@
+{
+	"Name": "RaycastEntitySpawn",
+	"Authors": ["Powback"],
+	"Description": "Raycast and entity tests",
+	"URL": "none",
+	"Version": 0,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

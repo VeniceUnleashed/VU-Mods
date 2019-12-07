@@ -1,0 +1,9 @@
+{
+	"Name": "GrenadeGrab",
+	"Authors": ["Powback"],
+	"Description": "Pick up that grenade!",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

@@ -1,0 +1,9 @@
+{
+	"Name": "ReloadTime",
+	"Authors": ["Powback"],
+	"Description": "Reload time",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

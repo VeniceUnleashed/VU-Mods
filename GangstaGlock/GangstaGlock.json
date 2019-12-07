@@ -1,0 +1,9 @@
+{
+	"Name": "GangstaGlock",
+	"Authors": ["Powback"],
+	"Description": "Hold the glock sideways",
+	"URL": "none",
+	"Version": 0,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

@@ -1,0 +1,9 @@
+{
+	"Name": "bomber",
+	"Authors": ["Powback"],
+	"Description": "Suicide Bomber",
+	"URL": "none",
+	"Version": 0,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

@@ -1,0 +1,9 @@
+{
+	"Name": "murdercage",
+	"Authors": [ "kiwidog" ],
+	"Description": "Only to be used on Operation Metro",
+	"URL": "",
+	"Version": 1,
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

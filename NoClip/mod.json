@@ -1,0 +1,9 @@
+{
+	"Name": "NoClip",
+	"Authors": ["txt", "POWW"],
+	"Description": "Clips the world in half",
+	"URL": "none",
+	"Version": "69",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
