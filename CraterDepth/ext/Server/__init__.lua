@@ -2,7 +2,7 @@ local craterDepthMultiplier = 100000
 local craterWidthMultiplier = 100000
 local craterDepthFactor = 2
 
-function onLevelLoaded(p_Map, p_GameMode, p_Round)
+function onLevelLoaded(map, gameMode, round)
 	-- Set terrain settings
 	local terrainSettings = ResourceManager:GetSettings("TerrainSettings")
 	if terrainSettings ~= nil then
