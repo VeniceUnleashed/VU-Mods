@@ -1,5 +1,5 @@
-local craterDepthMultiplier = 100000
-local craterWidthMultiplier = 100000
+local craterDepthMultiplier = 1000
+local craterWidthMultiplier = 1000
 local craterDepthFactor = 2
 
 function onLevelLoaded(map, gameMode, round)
