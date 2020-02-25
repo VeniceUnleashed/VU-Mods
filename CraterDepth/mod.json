@@ -1,9 +1,9 @@
 {
-	"Name": "crater",
+	"Name": "CraterDepth",
 	"Authors": ["Powback"],
-	"Description": "big craters muh realism",
+	"Description": "Makes craters bigger",
 	"URL": "",
-	"Version": "0",
+	"Version": "1.0",
 	"HasWebUI": false,
 	"HasVeniceEXT": true
 }
