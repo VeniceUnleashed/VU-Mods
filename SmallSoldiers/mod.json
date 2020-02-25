@@ -1,0 +1,9 @@
+{
+	"Name": "SmallSoldiers",
+	"Authors": ["Powback"],
+	"Description": "Make soldiers small",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
