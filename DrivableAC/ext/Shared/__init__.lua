@@ -19,42 +19,8 @@ function DrivableACShared:RegisterEvents()
 	Events:Subscribe('ExtensionLoaded', self, self.OnModify)
    	Events:Subscribe('Engine:Message', self, self.OnEngineMessage)
    	Events:Subscribe('Level:Destroy', self, self.RegisterVars)
-   	Events:Subscribe('Partition:Loaded', self, self.OnPartitionLoaded)
 end
 
-function DrivableACShared:OnPartitionLoaded(p_Partition)
-	if p_Partition == nil then
-		return
-	end
-
-	local s_Instances = p_Partition.instances
-
-	for _, l_Instance in ipairs(s_Instances) do
-		if l_Instance == nil then
-			print('Instance is null?')
-			break
-		end
-		if(l_Instance.typeInfo.name == "HealthStateData") then
-			--local s_Instance = HealthStateData (l_Instance)
-			--s_Instance:MakeWritable()
-			--s_Instance.partIndex = 4294967295
-		end
-		if(l_Instance.instanceGuid == Guid("03F37192-B626-9E7F-B42A-F964B1F261DA")) then
-			local s_Instance = ChassisComponentData(l_Instance)
-			--s_Instance:MakeWritable()
-			--s_Instance.components:add(CameraComponentData()) --dummy
-		end
-
-		if(l_Instance.instanceGuid == Guid("8AED7430-5807-A8C9-5ACC-47481D54F54E")) then
-			local s_Instance = VehicleEntityData(l_Instance)
-			--s_Instance:MakeWritable()
-			--s_Instance.runtimeComponentCount = 64 
-		end
-	end
-
-	
-
-end
 
 function DrivableACShared:OnEngineMessage(p_Message)
 	if p_Message.type == MessageType.ClientLevelFinalizedMessage or p_Message.type == MessageType.ServerLevelLoadedMessage then
@@ -164,8 +130,6 @@ function ClearPartsFromComponents( p_Instance )
 			s_Instance.components[k] = ClearPartsFromComponents(v:Clone())
 		end
 	end
-
-
 	return s_Instance
 end
 g_DrivableACShared = DrivableACShared()
