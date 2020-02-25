@@ -1,25 +1,25 @@
-class 'Deathcam'
+class 'FirstPersonDeathCam'
 
 
-function Deathcam:__init()
-	print("Initializing Deathcam")
+function FirstPersonDeathCam:__init()
+	print("Initializing FirstPersonDeathCam")
 	self:RegisterVars()
 	self:RegisterEvents()
 end
 
 
-function Deathcam:RegisterVars()
+function FirstPersonDeathCam:RegisterVars()
 	self.m_Camera = nil
 	self.m_CameraData = nil
 
 end
 
 
-function Deathcam:RegisterEvents()
+function FirstPersonDeathCam:RegisterEvents()
     self.m_UpdateEvent = Events:Subscribe("UpdateManager:Update", self, self.OnUpdateInput)
 end
 
-function Deathcam:ClearCam()
+function FirstPersonDeathCam:ClearCam()
 	if(self.m_Camera ~= nil) then
 		self.m_Camera:FireEvent("ReleaseControl")
 		self.m_Camera:Destroy()
@@ -27,7 +27,7 @@ function Deathcam:ClearCam()
 	end	
 end
 
-function Deathcam:OnUpdateInput(p_Hook, p_Cache, p_DeltaTime)
+function FirstPersonDeathCam:OnUpdateInput(p_Hook, p_Cache, p_DeltaTime)
 	local p_Player = PlayerManager:GetLocalPlayer()
 
 	if (p_Player == nil) then
@@ -143,5 +143,5 @@ function Normalize(quat)
 	return Quat(quat.x, quat.y, quat.z, quat.w)
 end
 
-g_Deathcam = Deathcam()
+g_FirstPersonDeathCam = FirstPersonDeathCam()
 
