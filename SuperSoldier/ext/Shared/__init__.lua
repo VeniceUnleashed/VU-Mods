@@ -45,7 +45,6 @@ Events:Subscribe('Partition:Loaded', function(partition)
 
 			-- Set correct 
 			if instance.instanceGuid == Guid('5917C5BE-142C-498F-9EA0-CCC6211746D2') then -- Characters/Soldiers/MpSoldier
-				print("cd")
 				local instance = CollisionData(instance)
 				instance:MakeWritable()
 				for i = 1,5 do
