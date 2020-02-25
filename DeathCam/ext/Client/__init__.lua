@@ -120,9 +120,6 @@ function Deathcam:OnUpdateInput(p_Hook, p_Cache, p_DeltaTime)
 	end
 end
 
--- Never ever fucking modify this, holy shit.
--- I spent 9 hours trying to figure out why my camera rotation wasn't working.
--- I swear to god, I will personally hunt you down.
 function multiply(in1, in2)
 	local Q1 = in1
 	local Q2 = in2
@@ -143,7 +140,7 @@ function Normalize(quat)
 		quat.z = quat.z * n
 		quat.w = quat.w * n		
 	end
-	return quat
+	return Quat(quat.x, quat.y, quat.z, quat.w)
 end
 
 g_Deathcam = Deathcam()
