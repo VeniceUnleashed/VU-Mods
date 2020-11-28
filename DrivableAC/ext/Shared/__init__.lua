@@ -34,13 +34,13 @@ function DrivableACShared:OnModify()
 	if(self.m_AC130 == nil) then
 
 
-		if(ResourceManager:FindInstanceByGUID(Guid('DE5A1D34-981C-11E1-B304-EDC7D93268C6'), Guid('561E82B1-FDB8-CE19-B9B5-79CB5B57E94F')) == nil) then
+		if(ResourceManager:FindInstanceByGuid(Guid('DE5A1D34-981C-11E1-B304-EDC7D93268C6'), Guid('561E82B1-FDB8-CE19-B9B5-79CB5B57E94F')) == nil) then
 			print("Failed to get AC130, probably loading for the first time...")
 			return
 		end
 
-		self.m_AC130 = VehicleBlueprint(ResourceManager:FindInstanceByGUID(Guid('DE5A1D34-981C-11E1-B304-EDC7D93268C6'), Guid('561E82B1-FDB8-CE19-B9B5-79CB5B57E94F')))
-		self.m_F18 = VehicleBlueprint(ResourceManager:FindInstanceByGUID(Guid('3EABB4EF-4003-11E0-8ACA-C41D37DB421C'), Guid('C81F8757-E6D2-DF2D-1CFE-B72B4F74FE98')))
+		self.m_AC130 = VehicleBlueprint(ResourceManager:FindInstanceByGuid(Guid('DE5A1D34-981C-11E1-B304-EDC7D93268C6'), Guid('561E82B1-FDB8-CE19-B9B5-79CB5B57E94F')))
+		self.m_F18 = VehicleBlueprint(ResourceManager:FindInstanceByGuid(Guid('3EABB4EF-4003-11E0-8ACA-C41D37DB421C'), Guid('C81F8757-E6D2-DF2D-1CFE-B72B4F74FE98')))
 
 		-- If any of these are missing, we're gonna get an error. Neat.
 	end
@@ -88,7 +88,7 @@ function DrivableACShared:OnModify()
 	print("Modified entry") 
 
 	-- Visual stuff
-	s_AC130DriverEntry.components:set(2, CameraComponentData(ResourceManager:FindInstanceByGUID(Guid('3EABB4EF-4003-11E0-8ACA-C41D37DB421C'), Guid('D7A2D4BF-994B-43E7-AC1B-BBAD5F0C619F'))))
+	s_AC130DriverEntry.components:set(2, CameraComponentData(ResourceManager:FindInstanceByGuid(Guid('3EABB4EF-4003-11E0-8ACA-C41D37DB421C'), Guid('D7A2D4BF-994B-43E7-AC1B-BBAD5F0C619F'))))
 	s_AC130DriverEntry.transform.trans.y = 2
 
 	
@@ -99,7 +99,7 @@ function DrivableACShared:OnModify()
 	s_Engine.transform.up = Vec3(0,1,0)
 	s_Engine.transform.forward = Vec3(0,0,1)
 
-	local s_JetEngineConfig = JetEngineConfigData(ResourceManager:FindInstanceByGUID(Guid('3EABB4EF-4003-11E0-8ACA-C41D37DB421C'), Guid('881DC5C3-E95A-4A0D-9D76-9DFCD9082D05')):Clone()) -- Some jet engine
+	local s_JetEngineConfig = JetEngineConfigData(ResourceManager:FindInstanceByGuid(Guid('3EABB4EF-4003-11E0-8ACA-C41D37DB421C'), Guid('881DC5C3-E95A-4A0D-9D76-9DFCD9082D05')):Clone()) -- Some jet engine
 	s_Engine.config = s_JetEngineConfig
 
 	s_JetEngineConfig.boost.forwardStrength = 10  
