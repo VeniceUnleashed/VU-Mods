@@ -45,6 +45,7 @@ function NoClipClient:OnUpdate(p_Delta, p_SimulationDelta)
 
 
 	if s_NoclipKey then
+		print("Toggled noclip")
 		self:Toggle()
 	end
 
@@ -69,9 +70,6 @@ function NoClipClient:OnUpdate(p_Delta, p_SimulationDelta)
 		s_LRMove = -1.0
 	end
 
-	
-
-
 	self:UpdateVelocity(s_FBMove, s_LRMove)
 
 end
@@ -82,6 +80,10 @@ function NoClipClient:UpdateVelocity(p_FBMove, p_LRMove)
 	if(self.m_LastUpdated < 0.1) then 
 		return
 	end
+	if p_FBMove == 0 and p_LRMove == 0 then
+		return
+	end
+
 	local s_Player = PlayerManager:GetLocalPlayer()
 	if s_Player == nil then
 		return
@@ -101,22 +103,23 @@ function NoClipClient:UpdateVelocity(p_FBMove, p_LRMove)
 
 	local s_CameraTransform = ClientUtils:GetCameraTransform()
 	
-	print("Got camera " .. tostring(s_CameraTransform.trans.x))
-
+	print("Got camera " .. tostring(s_CameraTransform.forward.x))
+	print("p_FBMove" .. tostring(p_FBMove))
+	print("p_LRMove" .. tostring(p_LRMove))
 	local s_Velocity = s_CameraTransform.forward*p_FBMove
+
+	print("after camera " .. tostring(s_Velocity.x))
 	-- calc velocity
 
 	print("Velocity X: " .. tostring(s_Velocity.x) .. " Velocity Y: " .. tostring(s_Velocity.y) .. " Velocity Z: " .. tostring(s_Velocity.z))
 
 	-- client prediction
-	s_SoldierPhysics.linearVelocity = s_Velocity
+	--s_SoldierPhysics.linearVelocity = s_Velocity
 
 
 	NetEvents:SendLocal('NoClip:SetVelocity', s_Velocity)
-	
-	
-	 
-	self.m_TimeSinceTP = 0
+
+	self.m_LastUpdated = 0
 end
 
 
