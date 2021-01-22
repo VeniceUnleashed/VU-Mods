@@ -37,6 +37,7 @@ function NoClipClient:Toggle()
 
 end
 
+local s_Multiplier = 1.0
 
 function NoClipClient:OnUpdate(p_Delta, p_SimulationDelta)
 
@@ -59,7 +60,7 @@ function NoClipClient:OnUpdate(p_Delta, p_SimulationDelta)
 	local s_FBMove = 0.0
 	local s_LRMove = 0.0
 	local s_UDMove = 0.0
-	local s_Multiplier = 1.0
+
 
 
 	local s_MouseWheel = InputManager:GetLevel(InputConceptIdentifiers.ConceptFreeCameraSwitchSpeed)
@@ -67,7 +68,7 @@ function NoClipClient:OnUpdate(p_Delta, p_SimulationDelta)
 		print("s_MouseWheel is nil")
 		return
 	else
-		s_Multiplier = s_Multiplier + (s_MouseWheel * 1)
+		s_Multiplier = math.max(0, s_Multiplier + (s_MouseWheel * 0.1))
 	end
 
 
@@ -100,7 +101,7 @@ function NoClipClient:OnUpdate(p_Delta, p_SimulationDelta)
 	if(self.m_LastUpdated < 0.01) then
 	return
 	end
-	if p_FBMove == 0 and p_LRMove == 0 and p_LRMove == 0 then
+	if p_FBMove == 0 and p_LRMove == 0 and p_UDMove == 0 then
 	return
 	end
 
