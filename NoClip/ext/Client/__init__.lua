@@ -120,19 +120,19 @@ function NoClipClient:OnUpdate(p_Delta, p_SimulationDelta)
 	return
 	end
 
-	print("Calcing velocity")
+	--print("Calcing velocity")
 
 	local s_CameraTransform = ClientUtils:GetCameraTransform()
 
-	print("Got camera " .. tostring(s_CameraTransform.forward.x))
-	print("p_FBMove" .. tostring(p_FBMove))
-	print("p_LRMove" .. tostring(p_LRMove))
+	--print("Got camera " .. tostring(s_CameraTransform.forward.x))
+	--print("p_FBMove" .. tostring(p_FBMove))
+	--print("p_LRMove" .. tostring(p_LRMove))
 	local s_Velocity = s_CameraTransform.forward*p_FBMove + s_CameraTransform.left*p_LRMove + s_CameraTransform.up*p_UDMove
 
-	print("after camera " .. tostring(s_Velocity.x))
+	--print("after camera " .. tostring(s_Velocity.x))
 	-- calc velocity
 
-	print("Velocity X: " .. tostring(s_Velocity.x) .. " Velocity Y: " .. tostring(s_Velocity.y) .. " Velocity Z: " .. tostring(s_Velocity.z))
+	--print("Velocity X: " .. tostring(s_Velocity.x) .. " Velocity Y: " .. tostring(s_Velocity.y) .. " Velocity Z: " .. tostring(s_Velocity.z))
 
 	-- client prediction
 	--s_SoldierPhysics.linearVelocity = s_Velocity
