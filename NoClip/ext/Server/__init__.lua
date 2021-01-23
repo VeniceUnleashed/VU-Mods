@@ -14,7 +14,6 @@ function NoClipServer:__init()
 	Events:Subscribe('Player:Destroyed', self, self.OnPlayerDeleted)
 
 	self.m_EnabledPlayers = {}
-
 end
 
 function NoClipServer:HasSoldier(p_Player)
@@ -44,7 +43,6 @@ function NoClipServer:TurnOff(p_Player)
 end	
 
 function NoClipServer:TurnOn(p_Player)
-
 	if p_Player == nil then
 		return
 	end
@@ -64,44 +62,22 @@ function NoClipServer:UpdateVelocity(p_Player, p_Velocity)
 	end
 	if self:HasSoldier(p_Player) then
 		local soldier = SoldierEntity(p_Player.soldier)
-
 		if soldier == nil then
 			print("soldier is nil")
 			return
 		end
 
 		local s_SoldierPhysics = PhysicsEntityBase(soldier.physicsEntityBase)
-
 		if s_SoldierPhysics == nil then
 			print("s_SoldierPhysics is nil")
 			return
 		end
 
-		-- print(p_Velocity)
 		p_Player.soldier:SetPosition( p_Player.soldier.physicsEntityBase.position - p_Velocity )
 	else 
 		print("Tried to teleport a player that\'s not alive: " .. p_Player)
 	end
 end
-
--- function NoClipServer:UpdateVelocity(p_Player, p_Velocity)
--- 	if self:HasSoldier(p_Player) then
-
-
--- 		local s_SoldierPhysics = p_Player.soldier.physicsEntityBase
-
--- 		if s_SoldierPhysics == nil then
--- 			return
--- 		end
-
-
--- 		s_SoldierPhysics.linearVelocity = p_Velocity
--- 		--p_Player.soldier:SetPosition(p_Transform)
--- 	else 
--- 		print("Tried to teleport a player that\'s not alive: " .. p_Player)
--- 	end
--- end
-
 
 function NoClipServer:OnPlayerDeleted(p_Player)
 
